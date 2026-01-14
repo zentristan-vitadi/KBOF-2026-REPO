@@ -1,90 +1,58 @@
-// Elements
-const mobileTrigger = document.getElementById('mobileSidebarTrigger');
-const sidebar = document.getElementById('sidebar');
-const sidebarClose = document.getElementById('sidebarClose');
-const overlay = document.createElement('div');
-
-// Create overlay
-overlay.className = 'sidebar-overlay';
-document.body.appendChild(overlay);
-
-// Mobile trigger click
-mobileTrigger.addEventListener('click', () => {
-  sidebar.classList.add('open');
-  overlay.classList.add('active');
-  document.body.style.overflow = 'hidden';
-});
-
-// Close sidebar
-function closeSidebar() {
-  sidebar.classList.remove('open');
-  overlay.classList.remove('active');
-  document.body.style.overflow = '';
-}
-
-// Close triggers
-sidebarClose.addEventListener('click', closeSidebar);
-overlay.addEventListener('click', closeSidebar);
-
-// Nav active state
-document.querySelectorAll('.nav-link[data-page]').forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    closeSidebar(); // Close on mobile
-    
-    // Update active
-    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-    link.classList.add('active');
-    
-    // Demo page switch
-    document.querySelector('.page-content').innerHTML = `
-      <h1>${link.dataset.page.charAt(0).toUpperCase() + link.dataset.page.slice(1)} Page</h1>
-      <p>Content for ${link.dataset.page} loaded!</p>
-    `;
-  });
-});
-
-// Detect device and show/hide trigger
-function updateMobileTrigger() {
-  if (window.innerWidth <= 1024) {
-    mobileTrigger.style.display = 'flex';
-  } else {
-    mobileTrigger.style.display = 'none';
-    closeSidebar(); // Close on desktop resize
-  }
-}
-
-window.addEventListener('resize', updateMobileTrigger);
-updateMobileTrigger(); // Initial check
-
-// Same JS as previous version - fully compatible
 const searchInput = document.getElementById('searchInput');
-const searchWrapper = document.getElementById('searchWrapper');
-const clearBtn = document.getElementById('clearBtn');
 const searchDropdown = document.getElementById('searchDropdown');
 
-searchInput.addEventListener('focus', () => {
-  searchWrapper.classList.add('focused');
-  searchDropdown.classList.add('active');
-});
-
-searchInput.addEventListener('blur', () => {
-  setTimeout(() => {
-    searchWrapper.classList.remove('focused');
+// Show dropdown when typing
+searchInput.addEventListener('input', function () {
+  if (this.value.length > 0) {
+    searchDropdown.classList.add('active');
+  } else {
     searchDropdown.classList.remove('active');
-  }, 200);
+  }
 });
 
-clearBtn.addEventListener('click', (e) => {
-  e.stopPropagation();
-  searchInput.value = '';
-  searchInput.focus();
+// Show dropdown on focus if there's text
+searchInput.addEventListener('focus', function () {
+  if (this.value.length > 0) {
+    searchDropdown.classList.add('active');
+  }
 });
 
-document.querySelectorAll('.suggestion').forEach(suggestion => {
-  suggestion.addEventListener('click', (e) => {
-    const text = suggestion.querySelector('span:nth-child(2)').textContent;
-    searchInput.value = text;
-    console.log(`Searching for: ${text}`);
+// Close dropdown when clicking outside
+document.addEventListener('click', function (event) {
+  if (!event.target.closest('.search-wrapper')) {
+    searchDropdown.classList.remove('active');
+  }
+});
+
+// Select item from dropdown
+function selectItem(itemName) {
+  searchInput.value = itemName;
+  searchDropdown.classList.remove('active');
+  console.log('Selected:', itemName);
+}
+
+function toggleNav() {
+  const sidenav = document.getElementById('sidenav');
+  const overlay = document.getElementById('overlay');
+
+  sidenav.classList.toggle('active');
+  overlay.classList.toggle('active');
+}
+
+function closeNav() {
+  const sidenav = document.getElementById('sidenav');
+  const overlay = document.getElementById('overlay');
+
+  sidenav.classList.remove('active');
+  overlay.classList.remove('active');
+}
+
+// Close nav when clicking on nav items on mobile
+const navItems = document.querySelectorAll('.nav-item');
+navItems.forEach(item => {
+  item.addEventListener('click', () => {
+    if (window.innerWidth <= 768) {
+      closeNav();
+    }
   });
 });
