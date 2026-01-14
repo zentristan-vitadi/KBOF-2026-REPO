@@ -55,8 +55,8 @@
     <!-- Search Bar -->
     <div class="search-container">
       <div class="search-wrapper">
-        <span class="search-icon">🔍</span>
-        <input type="text" class="search-input" id="searchInput" placeholder="Search And Command" autocomplete="off">
+        <span class="search-icon"><i class="fa-solid fa-magnifying-glass" style="color: #2D3436;"></i></span>
+        <input type="text" class="search-input" id="searchInput" placeholder="Search And Command..." autocomplete="off">
         <!-- ========== SEARCH DROPDOWN - MODIFIED WITH MORE SUGGESTIONS ========== -->
         <div class="search-dropdown" id="searchDropdown">
           <!-- Navigation Category -->
@@ -146,10 +146,10 @@
     <!-- Right Icons -->
     <div class="navbar-icons">
       <button class="icon-button" title="Add Friend">
-        👤
+        <i class="fa-solid fa-user fs4" style="color: #2D3436;"></i>
       </button>
       <button class="icon-button" title="Notifications">
-        🔔
+        <i class="fa-solid fa-bell" style="color: #2D3436;"></i>
         <span class="notification-badge"></span>
       </button>
     </div>
@@ -160,8 +160,8 @@
     <!-- Logo Section -->
     <div class="logo-section">
       <div class="logo-container">
-        <div class="logo-icon">U</div>
-        <span class="logo-text">Match</span>
+        <div class="logo-icon"><img src="assets/elements/UMatchLogo.png" alt="" width="98%"></div>
+        <span class="logo-text poppinsFont fw-bold fs-4">Match</span>
       </div>
       <button class="close-btn" onclick="closeNav()">
         ✕
@@ -171,30 +171,30 @@
     <!-- Main Navigation -->
     <div class="nav-main">
       <button class="nav-item">
-        <span class="icon">🏠</span>
-        <span>Home</span>
+        <span class="icon"><i class="fa-solid fa-house fs-4" style="color: #2D3436;"></i></span>
+        <span class="poppinsFont fs-6 fw-semibold">Home</span>
       </button>
 
       <button class="nav-item">
-        <span class="icon">📁</span>
-        <span>Projects</span>
+        <span class="icon"><i class="fa-solid fa-folder" style="color: #2D3436;"></i></span>
+        <span class="poppinsFont fs-6 fw-semibold">Projects</span>
       </button>
 
       <button class="nav-item">
-        <span class="icon">🧭</span>
-        <span>Explore</span>
+        <span class="icon"><i class="fa-solid fa-compass" style="color: #2D3436;"></i></span>
+        <span class="poppinsFont fs-6 fw-semibold">Explore</span>
       </button>
 
       <button class="nav-item">
-        <span class="icon">💬</span>
-        <span>Chat</span>
+        <span class="icon"><i class="fa-solid fa-comment" style="color: #2D3436;"></i></span>
+        <span class="poppinsFont fs-6 fw-semibold">Chat</span>
       </button>
 
       <!-- Find Match Button -->
       <div class="find-match-container">
         <button class="find-match-btn">
-          <span>❄️</span>
-          <span>Find Match</span>
+          <span><i class="fa-solid fa-puzzle-piece fs-5" style="color: #F7FFF7;"></i></span>
+          <span class="poppinsFont fs-6 fw-semibold">Find Match</span>
         </button>
       </div>
     </div>
@@ -202,18 +202,18 @@
     <!-- Bottom Navigation -->
     <div class="nav-bottom">
       <button class="nav-item">
-        <span class="icon">⚙️</span>
-        <span>Settings</span>
+        <span class="icon"><i class="fa-solid fa-gear" style="color: #2D3436;"></i></span>
+        <span class="poppinsFont fs-6 fw-semibold">Settings</span>
       </button>
 
       <button class="nav-item">
-        <span class="icon">❓</span>
-        <span>Help And Support</span>
+        <span class="icon"><i class="fa-solid fa-question-circle" style="color: #2D3436;"></i></span>
+        <span class="poppinsFont fs-6 fw-semibold">Help And Support</span>
       </button>
 
       <button class="nav-item">
-        <span class="icon">🚪</span>
-        <span>Log Out</span>
+        <span class="icon"><i class="fa-solid fa-sign-out-alt" style="color: #2D3436;"></i></span>
+        <span class="poppinsFont fs-6 fw-semibold">Log Out</span>
       </button>
     </div>
   </nav>
@@ -225,64 +225,86 @@
       <div class="welcome-section">
         <div class="profile-pic">B</div>
         <div class="welcome-text">
-          <h2>Welcome, Budiono Siregar</h2>
+          <h2 class="fw-semibold poppinsFont">Welcome, Budiono Siregar</h2>
         </div>
       </div>
 
       <!-- Dashboard Card -->
       <div class="dashboard-card">
-        <div class="dashboard-header">
-          📊 Dashboard Budiono Siregar
+        <div class="dashboard-header fw-bold fs-4">
+          <i class="fa-solid fa-chart-line" style="color: #2D3436;"></i> &nbsp;Dashboard Budiono Siregar
         </div>
-        <div class="dashboard-stats">
-          <div class="stat-item">• Active Current Project : 3</div>
-          <div class="stat-item">• Total Completed Project : 5</div>
-          <div class="stat-item">★ Ratings : 4.8</div>
+        <hr>
+        <div class="dashboard-stats justify-content-between">
+          <div class="stat-item interFont fw-semibold fs-6">• Active Current Project : 3</div>
+          <div class="stat-item interFont fw-semibold fs-6">• Total Completed Project : 5</div>
+          <div class="stat-item interFont fw-semibold fs-6">⭐ Ratings : 4.8</div>
         </div>
         <div class="progress-container">
           <div class="progress-bar">
             <div class="progress-fill" style="width: 55%"></div>
           </div>
-          <span class="progress-text">55% Completed</span>
         </div>
+        <span class="progress-text interFont fw-semibold fs-6 ms-3">55% Completed</span>
       </div>
 
       <!-- Current Active Projects -->
       <div class="projects-section">
-        <div class="section-header">Current Active Projects :</div>
+        <div class="section-header fw-bold fs-4"><i class="fa-solid fa-diagram-project" style="color: #2D3436;"></i> &nbsp;Current Active Projects :</div>
         <div class="projects-grid">
           <div class="project-card">
-            <div class="project-title">Felix Xiauw</div>
-            <div class="project-subtitle">Back End</div>
-            <div class="project-progress">Progress 60%</div>
+            <div class="project-title fw-bold poppinsFont fs-5">Siti Ruhayah Homestay</div>
+            <div class="project-subtitle fw-semibold">Homestay Website</div>
+            <div class="project-progress fw-semibold">Progress <span class="fw-bold">80%</span></div>
             <div class="project-buttons">
-              <button class="project-btn btn-chat">Chat</button>
-              <button class="project-btn btn-edit">Edit</button>
+              <button class="project-btn btn-chat fw-semibold">Chat</button>
+              <button class="project-btn btn-edit fw-semibold">Edit</button>
             </div>
-            <div class="project-deadline">Deadline : 2 Days</div>
+            <div class="project-deadline fw-semibold">Deadline : 3 Days</div>
+          </div>
+          <div class="project-card">
+            <div class="project-title fw-bold poppinsFont fs-5">Andiono Sumardi</div>
+            <div class="project-subtitle fw-semibold">Web Landing Page</div>
+            <div class="project-progress fw-semibold">Progress <span class="fw-bold">50%</span></div>
+            <div class="project-buttons">
+              <button class="project-btn btn-chat fw-semibold">Chat</button>
+              <button class="project-btn btn-edit fw-semibold">Edit</button>
+            </div>
+            <div class="project-deadline fw-semibold">Deadline : 5 Days</div>
+          </div>
+          <div class="project-card">
+            <div class="project-title fw-bold poppinsFont fs-5">Felix Xiauw</div>
+            <div class="project-subtitle fw-semibold">Back End</div>
+            <div class="project-progress fw-semibold">Progress <span class="fw-bold">60%</span></div>
+            <div class="project-buttons">
+              <button class="project-btn btn-chat fw-semibold">Chat</button>
+              <button class="project-btn btn-edit fw-semibold">Edit</button>
+            </div>
+            <div class="project-deadline fw-semibold">Deadline : 2 Days</div>
           </div>
         </div>
       </div>
 
       <!-- Upcoming Matches -->
       <div class="matches-section">
-        <div class="matches-header">
-          🎯 Upcoming Matches
+        <div class="matches-header fw-bold fs-4">
+          <i class="fa-solid fa-bullseye fs-3" style="color: #2D3436;"></i> &nbsp;Upcoming Matches
         </div>
+        <hr>
         <div class="matches-content">
           <div class="match-item">
-            <div class="match-title">➜ UI Designer Needed And Available</div>
-            <div class="match-description">
+            <div class="match-title fw-bold">➜ UI Designer Needed And Available</div>
+            <div class="match-description fw-semibold">
               • UI/UX Designer is Needed For Making Figma Design<br>
               Figma/Photoshop/Affinity Skills Needed
             </div>
           </div>
 
           <div class="match-message">
-            <div class="message-header">
+            <div class="message-header fw-bold">
               💬 NEW MESSAGES
             </div>
-            <div class="message-content">
+            <div class="message-content fw-semibold">
               Siti Ruhayah : "Bisa tambah foto produk?" [Reply]
             </div>
             <div class="message-time">• 2h ago</div>
@@ -292,54 +314,54 @@
 
       <!-- Quick Actions -->
       <div class="actions-section">
-        <div class="actions-header">Quick Actions</div>
+        <div class="actions-header fw-bold fs-4">Quick Actions</div>
         <div class="actions-grid">
           <button class="action-btn">
             <span class="action-icon">➕</span>
-            <div class="action-text">New Project</div>
-            <div class="action-subtext">(Create)</div>
+            <div class="action-text fw-bold">New Project</div>
+            <div class="action-subtext">[Create]</div>
           </button>
 
           <button class="action-btn">
             <span class="action-icon">🔍</span>
-            <div class="action-text">Find Jobs</div>
-            <div class="action-subtext">(Rules Now)</div>
+            <div class="action-text fw-bold">Find Jobs</div>
+            <div class="action-subtext">[Rules Now]</div>
           </button>
 
           <button class="action-btn">
             <span class="action-icon">📊</span>
-            <div class="action-text">Analytics</div>
-            <div class="action-subtext">(View)</div>
+            <div class="action-text fw-bold">Analytics</div>
+            <div class="action-subtext">[View]</div>
           </button>
 
           <button class="action-btn">
             <span class="action-icon">⭐</span>
-            <div class="action-text">Reviews</div>
-            <div class="action-subtext">(Manage)</div>
+            <div class="action-text fw-bold">Reviews</div>
+            <div class="action-subtext">[Manage]</div>
           </button>
         </div>
       </div>
 
       <!-- Recent Activities -->
       <div class="activities-section">
-        <div class="activities-header">
-          📈 Recent Activities
+        <div class="activities-header fs-4 fw-bold">
+          <i class="fa-solid fa-chart-line" style="color: #2D3436;"></i> &nbsp; Recent Activities
         </div>
         <div class="activities-content">
           <div class="activity-item">
-            <span class="activity-text">• Project "Landing Page" marked 80% complete</span>
+            <span class="activity-text fw-semibold">• Project "Landing Page" marked 80% complete</span>
             <span class="activity-time">2h ago</span>
           </div>
           <div class="activity-item">
-            <span class="activity-text">• New match with Andi UI/UX Designer</span>
+            <span class="activity-text fw-semibold">• New match with Andi UI/UX Designer</span>
             <span class="activity-time">1d ago</span>
           </div>
           <div class="activity-item">
-            <span class="activity-text">• Certificate received</span>
+            <span class="activity-text fw-semibold ">• Certificate received</span>
             <span class="activity-time">2d ago</span>
           </div>
           <div class="activity-item">
-            <span class="activity-text">• 5⭐ review from previous client</span>
+            <span class="activity-text fw-semibold">• 5⭐ review from previous client</span>
             <span class="activity-time">3d ago</span>
           </div>
         </div>
@@ -349,8 +371,8 @@
       <div class="footer">
         <div class="footer-content">
           <div class="footer-logo">
-            <div class="logo-icon">U</div>
-            <span class="logo-text">Match</span>
+            <div class="logo-icon"><img src="assets/elements/UMatchLogo.png" alt="" width="98%"></div>
+            <span class="logo-text fw-bold fs-4">Match</span>
             <span style="color: #6b7280; font-size: 0.875rem;">@2025 UMatch, Inc</span>
           </div>
           <div class="footer-links">
