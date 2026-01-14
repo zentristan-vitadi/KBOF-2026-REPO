@@ -52,93 +52,92 @@
   <!-- Top Navigation Bar -->
   <div class="top-navbar">
     <!-- Search Bar -->
-    <!-- Search Bar -->
     <div class="search-container">
       <div class="search-wrapper">
         <span class="search-icon"><i class="fa-solid fa-magnifying-glass" style="color: #2D3436;"></i></span>
         <input type="text" class="search-input" id="searchInput" placeholder="Search And Command..." autocomplete="off">
         <!-- ========== SEARCH DROPDOWN - MODIFIED WITH MORE SUGGESTIONS ========== -->
         <div class="search-dropdown" id="searchDropdown">
-          <!-- Navigation Category -->
-          <div class="dropdown-category">📍 Navigation</div>
-          <div class="dropdown-item" onclick="selectItem('Home Dashboard')">
-            <span class="dropdown-icon">🏠</span>
-            <div class="dropdown-text">
-              <div class="dropdown-title">Home Dashboard</div>
-              <div class="dropdown-subtitle">Navigate to main dashboard</div>
-            </div>
-          </div>
-          <div class="dropdown-item" onclick="selectItem('My Projects')">
-            <span class="dropdown-icon">📁</span>
-            <div class="dropdown-text">
-              <div class="dropdown-title">My Projects</div>
-              <div class="dropdown-subtitle">View all your projects</div>
-            </div>
-          </div>
-          <div class="dropdown-item" onclick="selectItem('Explore Matches')">
-            <span class="dropdown-icon">🧭</span>
-            <div class="dropdown-text">
-              <div class="dropdown-title">Explore Matches</div>
-              <div class="dropdown-subtitle">Discover new connections</div>
-            </div>
-          </div>
-          <div class="dropdown-item" onclick="selectItem('Chat Messages')">
-            <span class="dropdown-icon">💬</span>
-            <div class="dropdown-text">
-              <div class="dropdown-title">Chat Messages</div>
-              <div class="dropdown-subtitle">Open your conversations</div>
-            </div>
-            <span class="dropdown-badge">3 NEW</span>
-          </div>
+                    <!-- Navigation Category -->
+                    <div class="dropdown-category">📍 Navigation</div>
+                    <div class="dropdown-item" onclick="selectItem('Home Dashboard')">
+                        <span class="dropdown-icon">🏠</span>
+                        <div class="dropdown-text">
+                            <div class="dropdown-title">Home Dashboard</div>
+                            <div class="dropdown-subtitle">Navigate to main dashboard</div>
+                        </div>
+                    </div>
+                    <div class="dropdown-item" onclick="selectItem('My Projects')">
+                        <span class="dropdown-icon">📁</span>
+                        <div class="dropdown-text">
+                            <div class="dropdown-title">My Projects</div>
+                            <div class="dropdown-subtitle">View all your projects</div>
+                        </div>
+                    </div>
+                    <div class="dropdown-item" onclick="selectItem('Explore Matches')">
+                        <span class="dropdown-icon">🧭</span>
+                        <div class="dropdown-text">
+                            <div class="dropdown-title">Explore Matches</div>
+                            <div class="dropdown-subtitle">Discover new connections</div>
+                        </div>
+                    </div>
+                    <div class="dropdown-item" onclick="selectItem('Chat Messages')">
+                        <span class="dropdown-icon">💬</span>
+                        <div class="dropdown-text">
+                            <div class="dropdown-title">Chat Messages</div>
+                            <div class="dropdown-subtitle">Open your conversations</div>
+                        </div>
+                        <span class="dropdown-badge">3 NEW</span>
+                    </div>
 
-          <!-- Quick Actions Category -->
-          <div class="dropdown-category">⚡ Quick Actions</div>
-          <div class="dropdown-item" onclick="selectItem('Create New Project')">
-            <span class="dropdown-icon">➕</span>
-            <div class="dropdown-text">
-              <div class="dropdown-title">Create New Project</div>
-              <div class="dropdown-subtitle">Start a new project instantly</div>
-            </div>
-          </div>
-          <div class="dropdown-item" onclick="selectItem('Find Jobs')">
-            <span class="dropdown-icon">🔍</span>
-            <div class="dropdown-text">
-              <div class="dropdown-title">Find Jobs</div>
-              <div class="dropdown-subtitle">Browse available opportunities</div>
-            </div>
-          </div>
-          <div class="dropdown-item" onclick="selectItem('View Analytics')">
-            <span class="dropdown-icon">📊</span>
-            <div class="dropdown-text">
-              <div class="dropdown-title">View Analytics</div>
-              <div class="dropdown-subtitle">Check your performance stats</div>
-            </div>
-          </div>
+                    <!-- Quick Actions Category -->
+                    <div class="dropdown-category">⚡ Quick Actions</div>
+                    <div class="dropdown-item" onclick="selectItem('Create New Project')">
+                        <span class="dropdown-icon">➕</span>
+                        <div class="dropdown-text">
+                            <div class="dropdown-title">Create New Project</div>
+                            <div class="dropdown-subtitle">Start a new project instantly</div>
+                        </div>
+                    </div>
+                    <div class="dropdown-item" onclick="selectItem('Find Jobs')">
+                        <span class="dropdown-icon">🔍</span>
+                        <div class="dropdown-text">
+                            <div class="dropdown-title">Find Jobs</div>
+                            <div class="dropdown-subtitle">Browse available opportunities</div>
+                        </div>
+                    </div>
+                    <div class="dropdown-item" onclick="selectItem('View Analytics')">
+                        <span class="dropdown-icon">📊</span>
+                        <div class="dropdown-text">
+                            <div class="dropdown-title">View Analytics</div>
+                            <div class="dropdown-subtitle">Check your performance stats</div>
+                        </div>
+                    </div>
 
-          <!-- Settings Category -->
-          <div class="dropdown-category">⚙️ Settings & Support</div>
-          <div class="dropdown-item" onclick="selectItem('Settings')">
-            <span class="dropdown-icon">⚙️</span>
-            <div class="dropdown-text">
-              <div class="dropdown-title">Settings</div>
-              <div class="dropdown-subtitle">Manage your preferences</div>
-            </div>
-          </div>
-          <div class="dropdown-item" onclick="selectItem('Help Center')">
-            <span class="dropdown-icon">❓</span>
-            <div class="dropdown-text">
-              <div class="dropdown-title">Help Center</div>
-              <div class="dropdown-subtitle">Get support and answers</div>
-            </div>
-          </div>
-          <div class="dropdown-item" onclick="selectItem('Profile Settings')">
-            <span class="dropdown-icon">👤</span>
-            <div class="dropdown-text">
-              <div class="dropdown-title">Profile Settings</div>
-              <div class="dropdown-subtitle">Update your profile information</div>
-            </div>
-          </div>
-        </div>
+                    <!-- Settings Category -->
+                    <div class="dropdown-category">⚙️ Settings & Support</div>
+                    <div class="dropdown-item" onclick="selectItem('Settings')">
+                        <span class="dropdown-icon">⚙️</span>
+                        <div class="dropdown-text">
+                            <div class="dropdown-title">Settings</div>
+                            <div class="dropdown-subtitle">Manage your preferences</div>
+                        </div>
+                    </div>
+                    <div class="dropdown-item" onclick="selectItem('Help Center')">
+                        <span class="dropdown-icon">❓</span>
+                        <div class="dropdown-text">
+                            <div class="dropdown-title">Help Center</div>
+                            <div class="dropdown-subtitle">Get support and answers</div>
+                        </div>
+                    </div>
+                    <div class="dropdown-item" onclick="selectItem('Profile Settings')">
+                        <span class="dropdown-icon">👤</span>
+                        <div class="dropdown-text">
+                            <div class="dropdown-title">Profile Settings</div>
+                            <div class="dropdown-subtitle">Update your profile information</div>
+                        </div>
+                    </div>
+                </div>
         <!-- ========== END SEARCH DROPDOWN ========== -->
       </div>
     </div>
