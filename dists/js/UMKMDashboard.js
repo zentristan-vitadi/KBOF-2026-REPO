@@ -56,3 +56,35 @@ function updateMobileTrigger() {
 
 window.addEventListener('resize', updateMobileTrigger);
 updateMobileTrigger(); // Initial check
+
+// Same JS as previous version - fully compatible
+const searchInput = document.getElementById('searchInput');
+const searchWrapper = document.getElementById('searchWrapper');
+const clearBtn = document.getElementById('clearBtn');
+const searchDropdown = document.getElementById('searchDropdown');
+
+searchInput.addEventListener('focus', () => {
+  searchWrapper.classList.add('focused');
+  searchDropdown.classList.add('active');
+});
+
+searchInput.addEventListener('blur', () => {
+  setTimeout(() => {
+    searchWrapper.classList.remove('focused');
+    searchDropdown.classList.remove('active');
+  }, 200);
+});
+
+clearBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  searchInput.value = '';
+  searchInput.focus();
+});
+
+document.querySelectorAll('.suggestion').forEach(suggestion => {
+  suggestion.addEventListener('click', (e) => {
+    const text = suggestion.querySelector('span:nth-child(2)').textContent;
+    searchInput.value = text;
+    console.log(`Searching for: ${text}`);
+  });
+});
