@@ -1429,6 +1429,7 @@ body {
 
 
 /* ========== MATCH POPUP STYLES - NEW ========== */
+/* For Chrome, Safari, Opera, and other WebKit-based browsers */
 .match-popup-overlay {
   display: none;
   position: fixed;
@@ -1455,7 +1456,7 @@ body {
 }
 
 .match-popup {
-  background: white;
+  background: var(--background-color);
   border-radius: 1.5rem;
   width: 90%;
   max-width: 50rem;
@@ -1463,6 +1464,9 @@ body {
   overflow-y: auto;
   position: relative;
   animation: slideUp 0.4s ease-out;
+}
+.match-popup::-webkit-scrollbar {
+  display: none;          /* Chrome, Safari */
 }
 
 @keyframes slideUp {
