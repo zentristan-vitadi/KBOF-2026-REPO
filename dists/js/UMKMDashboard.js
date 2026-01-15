@@ -23,6 +23,8 @@ const tenagaKerjaData = [
   { name: "Lina Kartika", type: "Tenaga Kerja", profession: "Accountant", experience: "6 years", rating: "4.8", desc: "Financial planning and bookkeeping expert", skills: ["Excel", "QuickBooks", "Tax"] }
 ];
 
+
+
 let currentMatches = { umkm: null, tenagaKerja: null };
 
 // Open Match Popup
@@ -81,6 +83,10 @@ function displayMatches(umkm, tenagaKerja) {
   const umkmInitial = umkm.name.charAt(0);
   const tkInitial = tenagaKerja.name.charAt(0);
 
+  const setTKName = 'Budiono Siregar';
+  const setTKProfession = 'UI/UX Designer';
+  const setTKAvatar = 'B';
+
   grid.innerHTML = `
                 <div class="match-card">
                     <div class="match-card-type">${umkm.type}</div>
@@ -97,9 +103,9 @@ function displayMatches(umkm, tenagaKerja) {
                 
                 <div class="match-card">
                     <div class="match-card-type">${tenagaKerja.type}</div>
-                    <div class="match-card-avatar">${tkInitial}</div>
-                    <h4>${tenagaKerja.name}</h4>
-                    <div class="match-card-info">💼 ${tenagaKerja.profession}</div>
+                    <div class="match-card-avatar">${setTKAvatar}</div>
+                    <h4>${setTKName}</h4>
+                    <div class="match-card-info">💼 ${setTKProfession}</div>
                     <div class="match-card-info">⭐ ${tenagaKerja.rating} Rating</div>
                     <div class="match-card-info">📅 ${tenagaKerja.experience} experience</div>
                     <div class="match-card-desc">${tenagaKerja.desc}</div>
