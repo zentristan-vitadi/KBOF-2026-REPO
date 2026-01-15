@@ -11,7 +11,11 @@
 .poppinsFont {
   font-family: poppins;
 }
-
+.poppinsFont a{
+  font-family: poppins;
+  text-decoration: none;
+  color: inherit;
+}
 .interFont {
   font-family: 'Inter', sans-serif;
 }

@@ -112,10 +112,10 @@ form.addEventListener('submit', function (e) {
         // Get selected category
         const selectedCategory = document.getElementById('category').value;
 
-        // Dashboard URLs - you can fill these in later
+        // Dashboard file paths - fill in your actual file paths
         const dashboardURLs = {
-            'UMKM': '', // Fill in your UMKM dashboard URL here
-            'Tenaga Kerja': '' // Fill in your Tenaga Kerja dashboard URL here
+            'UMKM': '/dists/html/umkmDashBoard.html', // Replace with your UMKM dashboard file path
+            'Tenaga Kerja': '/dists/html/TKDashBoard.html' // Replace with your Tenaga Kerja dashboard file path
         };
 
         // Get the appropriate dashboard URL
@@ -125,12 +125,7 @@ form.addEventListener('submit', function (e) {
         alert(`Sign up successful as ${selectedCategory}! Redirecting to ${selectedCategory} Dashboard...`);
 
         // Redirect to the appropriate dashboard
-        // Uncomment the line below and fill in the URLs above when ready
-        // window.location.href = redirectURL;
-
-        // For now, just show which dashboard would be selected
-        console.log(`Would redirect to: ${selectedCategory} Dashboard`);
-        console.log(`URL: ${redirectURL || 'URL not set yet'}`);
+        window.location.href = redirectURL;
     }
 });
 

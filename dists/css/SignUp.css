@@ -13,7 +13,7 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: poppins;
     background-color: #2d3748;
     min-height: 100vh;
     display: flex;
@@ -26,7 +26,7 @@ body {
     display: flex;
     max-width: 1200px;
     width: 100%;
-    background: white;
+    background: var(--main-background-color);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
@@ -34,7 +34,8 @@ body {
 
 .left-section {
     flex: 1;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), #a67c52;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), #a67c52; */
+    background-image: url(../../assets/images/SignUpPagesImages.png);
     padding: 60px 40px;
     display: flex;
     flex-direction: column;
@@ -44,7 +45,7 @@ body {
 }
 
 .logo {
-    background: white;
+    background: var(--main-background-color);
     padding: 12px 24px;
     border-radius: 25px;
     display: inline-flex;
@@ -58,7 +59,7 @@ body {
 .logo-icon {
     width: 30px;
     height: 30px;
-    background: #ff6b35;
+    /* background: #ff6b35; */
     border-radius: 8px;
     display: flex;
     align-items: center;
