@@ -86,6 +86,9 @@ function displayMatches(umkm, tenagaKerja) {
   const setTKName = 'Budiono Siregar';
   const setTKProfession = 'UI/UX Designer';
   const setTKAvatar = 'B';
+  const setTKExperience = '4 years';
+  const setTKDesc = 'Creating The Best Design There Is';
+  const setTKSkills = ['Figma', 'Photoshop', 'UI/UX Design'];
 
   grid.innerHTML = `
                 <div class="match-card">
@@ -107,10 +110,10 @@ function displayMatches(umkm, tenagaKerja) {
                     <h4>${setTKName}</h4>
                     <div class="match-card-info">💼 ${setTKProfession}</div>
                     <div class="match-card-info">⭐ ${tenagaKerja.rating} Rating</div>
-                    <div class="match-card-info">📅 ${tenagaKerja.experience} experience</div>
-                    <div class="match-card-desc">${tenagaKerja.desc}</div>
+                    <div class="match-card-info">📅 ${setTKExperience} experience</div>
+                    <div class="match-card-desc">${setTKDesc}</div>
                     <div class="match-card-skills">
-                        ${tenagaKerja.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
+                        ${setTKSkills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
                     </div>
                 </div>
             `;
