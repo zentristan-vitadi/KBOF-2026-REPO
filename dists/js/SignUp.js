@@ -129,5 +129,28 @@ form.addEventListener('submit', function (e) {
     }
 });
 
+document.querySelectorAll('a[href]').forEach(link => {
+    link.addEventListener('click', e => {
+        const href = link.getAttribute('href');
+        const target = link.getAttribute('target');
+
+        if (
+            !href ||
+            href.startsWith('#') ||
+            href.startsWith('http') ||
+            href.startsWith('mailto:') ||
+            target === '_blank'
+        ) return;
+
+        e.preventDefault();
+        document.body.classList.add('fade-out');
+
+        setTimeout(() => {
+            window.location.href = href;
+        }, 500);
+    });
+});
+
+
 // Initial form validity check
 checkFormValidity();
