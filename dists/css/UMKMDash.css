@@ -1426,3 +1426,404 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+
+/* ========== MATCH POPUP STYLES - NEW ========== */
+.match-popup-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.match-popup-overlay.active {
+  display: flex;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.match-popup {
+  background: white;
+  border-radius: 1.5rem;
+  width: 90%;
+  max-width: 50rem;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.match-popup-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  z-index: 10;
+}
+
+.match-popup-close:hover {
+  background: rgba(0, 0, 0, 0.2);
+  transform: rotate(90deg);
+}
+
+.match-header {
+  background: linear-gradient(135deg, #06b6d4, #0891b2);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.match-header h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.match-header p {
+  opacity: 0.9;
+  font-size: 0.875rem;
+}
+
+/* Loading Animation */
+.match-loading {
+  padding: 3rem;
+  text-align: center;
+  display: none;
+}
+
+.match-loading.active {
+  display: block;
+}
+
+.spinner-container {
+  position: relative;
+  width: 12rem;
+  height: 12rem;
+  margin: 0 auto 2rem;
+}
+
+.spinner {
+  width: 100%;
+  height: 100%;
+  border: 0.5rem solid #e5e7eb;
+  border-top: 0.5rem solid #06b6d4;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+.loading-text {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.loading-subtext {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Match Results */
+.match-results {
+  padding: 2rem;
+  display: none;
+}
+
+.match-results.active {
+  display: block;
+}
+
+.match-success {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.match-success-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: bounceIn 0.6s ease-out;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.match-success h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.match-success p {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.matches-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.match-card {
+  background: linear-gradient(135deg, #f0fdfa, #ccfbf1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  border: 2px solid #06b6d4;
+  transition: all 0.3s;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.match-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(6, 182, 212, 0.2);
+}
+
+.match-card-type {
+  background-color: #06b6d4;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.375rem 0.75rem;
+  border-radius: 1rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.match-card-avatar {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+  border: 3px solid white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.match-card h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.match-card-info {
+  font-size: 0.875rem;
+  color: #065f46;
+  margin-bottom: 0.25rem;
+}
+
+.match-card-desc {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 0.75rem;
+  line-height: 1.4;
+}
+
+.match-card-skills {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.skill-tag {
+  background-color: rgba(6, 182, 212, 0.2);
+  color: #065f46;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-weight: 500;
+}
+
+.match-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.match-btn {
+  padding: 0.875rem 2rem;
+  border-radius: 0.75rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.match-btn-reroll {
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
+.match-btn-reroll:hover {
+  background-color: #e5e7eb;
+  transform: translateY(-2px);
+}
+
+.match-btn-chat {
+  background: linear-gradient(135deg, #06b6d4, #0891b2);
+  color: white;
+  box-shadow: 0 4px 6px rgba(6, 182, 212, 0.3);
+}
+
+.match-btn-chat:hover {
+  background: linear-gradient(135deg, #0891b2, #0e7490);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(6, 182, 212, 0.4);
+}
+
+/* Mobile Responsive for Match Popup */
+@media (max-width: 768px) {
+  .match-popup {
+    width: 95%;
+    max-height: 95vh;
+  }
+
+  .match-header {
+    padding: 1.5rem;
+  }
+
+  .match-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .match-loading {
+    padding: 2rem 1rem;
+  }
+
+  .spinner-container {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .spinner-icon {
+    font-size: 2.5rem;
+  }
+
+  .match-results {
+    padding: 1.5rem;
+  }
+
+  .matches-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .match-card {
+    padding: 1.25rem;
+  }
+
+  .match-actions {
+    flex-direction: column;
+  }
+
+  .match-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ========== END MATCH POPUP STYLES ========== */

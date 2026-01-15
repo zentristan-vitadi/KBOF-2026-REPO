@@ -192,7 +192,7 @@
 
       <!-- Find Match Button -->
       <div class="find-match-container">
-        <button class="find-match-btn">
+        <button class="find-match-btn" onclick="openMatchPopup()">
           <span><i class="fa-solid fa-puzzle-piece fs-5" style="color: #F7FFF7;"></i></span>
           <span class="poppinsFont fs-6 fw-semibold">Find Match</span>
         </button>
@@ -464,6 +464,52 @@
         </div>
       </div>
     </div>
+    <!-- ========== MATCH POPUP - NEW ========== -->
+    <div class="match-popup-overlay" id="matchPopupOverlay">
+      <div class="match-popup">
+        <button class="match-popup-close" onclick="closeMatchPopup()">✕</button>
+
+        <div class="match-header">
+          <h2>🎯 Find Your Perfect Match</h2>
+          <p>Connecting you with the best UMKM and Tenaga Kerja partners</p>
+        </div>
+
+        <!-- Loading Animation -->
+        <div class="match-loading" id="matchLoading">
+          <div class="spinner-container">
+            <div class="spinner"></div>
+            <div class="spinner-icon">🔄</div>
+          </div>
+          <div class="loading-text">Finding Your Matches...</div>
+          <div class="loading-subtext">Please wait while we search for the perfect partners</div>
+        </div>
+
+        <!-- Match Results -->
+        <div class="match-results" id="matchResults">
+          <div class="match-success">
+            <div class="match-success-icon">🎉</div>
+            <h3>Match Found!</h3>
+            <p>We found the perfect partners for you</p>
+          </div>
+
+          <div class="matches-grid" id="matchesGrid">
+            <!-- Match cards will be inserted here by JavaScript -->
+          </div>
+
+          <div class="match-actions">
+            <button class="match-btn match-btn-reroll" onclick="rerollMatches()">
+              <span>🔄</span>
+              <span>Reroll</span>
+            </button>
+            <button class="match-btn match-btn-chat" onclick="startChatWithMatch()">
+              <span>💬</span>
+              <span>Start Chatting</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END MATCH POPUP ========== -->
   </div>
 
   <script src="../js/UMKMDashboard.js"></script>
