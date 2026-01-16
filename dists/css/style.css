@@ -4,6 +4,7 @@
     --tertiary-color: #45B7D1;
     --main-background-color: #F7FFF7;
     --text-color: #2D3436;
+    --secondary-font: 'Inter', sans-serif;
 }
 
 * {
@@ -45,7 +46,7 @@ h6 {
 
 /* Navbar - Floating Island Style */
 .navbar {
-    background-color: white;
+    background-color: var(--main-background-color);
     padding: 1rem 0;
     position: fixed;
     top: 20px;
@@ -68,7 +69,8 @@ h6 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    padding: 0.2rem;
+    
 }
 
 .logo {
@@ -78,27 +80,39 @@ h6 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 1.5rem;
+    background-color: var(--main-background-color);
+    border-radius: 50px;
+    justify-content: center;
+    width: fit-content;
+    margin: auto;
+    padding: 0.5rem 1.5rem;
+    
 }
 
-.logo-icon {
+/* .logo-icon {
     font-size: 2rem;
-}
+} */
 
 .logo-text {
-    color: var(--orange);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
 }
 
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
+    justify-content: space-between;
 }
 
 .nav-link {
     text-decoration: none;
     color: var(--text-color);
-    font-weight: 500;
+    font-weight: 600;
     transition: color 0.3s;
+    border-left: 2px solid var(--text-color);
+    padding: 0px 0px 0px 50px;
 }
 
 .nav-link:hover {
@@ -167,19 +181,20 @@ h6 {
 
 .hero-title {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 400;
     margin-bottom: 1rem;
     line-height: 1.3;
 }
 
 .text-highlight {
-    color: var(--orange);
+    color: var(--secondary-color);
 }
 
 .hero-description {
     font-size: 1.1rem;
     margin-bottom: 2rem;
-    color: #666;
+    color: var(--text-color);
+    font-family: var(--secondary-font);
 }
 
 .cta-buttons {
@@ -205,7 +220,13 @@ h6 {
     color: #666;
 }
 
+.btn-email{
+    background-color: var(--primary-color) !important; 
+    color: var(--main-background-color) !important;
+}
+
 .btn-google,
+.btn-email,
 .btn-facebook {
     display: flex;
     align-items: center;
@@ -219,13 +240,16 @@ h6 {
     border: 2px solid #ddd;
     background-color: white;
     color: var(--text-color);
+    width: 80%;
 }
 
 .btn-google:hover,
+.btn-email:hover,
 .btn-facebook:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
+
 
 .hero-image {
     position: relative;
@@ -278,9 +302,9 @@ h6 {
 }
 
 .partners-title {
-    text-align: center;
     margin-bottom: 2rem;
-    color: #666;
+    color: var(--text-color);
+    font-weight: 500;
 }
 
 .partner-logos {
@@ -303,35 +327,66 @@ h6 {
 
 /* Problem Section */
 .problem-section {
-    padding: 4rem 0;
-    background-color: white;
+    padding: 3rem 0;
+    background-color: var(--main-background-color);
 }
 
 .section-title {
-    font-size: 2.2rem;
+    font-size: 3rem;
     text-align: center;
     margin-bottom: 1rem;
     font-weight: 700;
+    color: var(--main-background-color);
+    text-shadow: 2px 1px #464f52;
 }
-
+.section-title1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-shadow: 2px 1px #464f52;
+}
+.ApaItuUmatch-Header{
+    display: flex;
+    justify-content: space-between;
+    
+}
 .text-orange {
     color: var(--orange);
 }
 
 .section-description {
+    text-align: start;
+    max-width: 600px;
+    margin: 0 auto 1rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.8;
+    color: var(--main-background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section-description1 {
     text-align: center;
     max-width: 900px;
     margin: 0 auto 3rem;
-    font-size: 1.05rem;
-    color: #666;
+    font-size: 1rem;
+    color: var(--text-color);
     line-height: 1.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .problem-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    display: flex;
+    gap: 1rem;
     margin-top: 3rem;
+}
+.problem-visual{
+    width: 30%;
 }
 
 .chart-placeholder {
@@ -408,8 +463,13 @@ h6 {
 
 /* Services Section */
 .services-section {
-    padding: 4rem 0;
-    background-color: var(--light-blue);
+    background-image: url(../../assets/images/ApaItuUmatchBG.png);
+    padding: 5rem 0rem;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 105vh;
+    background-size: cover;
+    background-position: center;
 }
 
 .services-grid {
@@ -421,7 +481,7 @@ h6 {
 
 .service-card {
     border-radius: 20px;
-    padding: 2rem;
+    padding: 1.2rem;
     color: white;
 }
 
@@ -458,7 +518,8 @@ h6 {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 0.2rem;
+    font: var(--secondary-font);
 }
 
 .service-list li {
@@ -476,9 +537,12 @@ h6 {
 /* Why Section */
 .why-section {
     padding: 4rem 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%234ECDC4" width="1200" height="800"/></svg>') fixed;
+    background: url(../../assets/images/KenapaUMatchBG.png) fixed;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 45rem;
     background-size: cover;
-    position: relative;
+    background-position: center;
 }
 
 .why-section::before {
@@ -488,7 +552,6 @@ h6 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(78, 205, 196, 0.9);
 }
 
 .why-section .container {
@@ -508,10 +571,9 @@ h6 {
 }
 
 .why-card {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(78, 205, 196, 0.55);
     padding: 2.5rem;
     border-radius: 20px;
-    text-align: center;
     transition: transform 0.3s;
 }
 
@@ -538,8 +600,9 @@ h6 {
 .footer {
     background-color: var(--orange);
     color: white;
-    padding: 3rem 0 1.5rem;
-    border-radius: 50px 50px 0 0;
+    padding: 2rem 0 1.5rem;
+    margin: 1rem 1rem;
+    border-radius: 30px;
     margin-top: 4rem;
     box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.1);
 }
@@ -556,6 +619,8 @@ h6 {
     flex-direction: column;
     gap: 1.5rem;
     max-width: 400px;
+    text-align: center;
+    margin: auto;
 }
 
 .footer-logo .logo {
@@ -569,14 +634,15 @@ h6 {
 }
 
 .footer-tagline {
-    font-size: 0.95rem;
-    opacity: 0.95;
+    font-size: 1rem;
     line-height: 1.6;
+    color: var(--main-background-color);
 }
 
 .footer-social {
     display: flex;
     gap: 1rem;
+    margin: auto;
 }
 
 .social-link {
