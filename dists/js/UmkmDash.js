@@ -1,4 +1,18 @@
 /* ========== MATCH SYSTEM - NEW ========== */
+
+window.addEventListener("load", function () {
+  const loader = document.getElementById("loader");
+  const content = document.getElementById("content");
+
+  setTimeout(() => {
+    loader.style.opacity = "0";
+
+    setTimeout(() => {
+      loader.style.display = "none";
+      content.style.display = "block";
+    }, 500);
+  }, 1100);
+});
 // Sample data for UMKM (businesses)
 const umkmData = [
   { name: "Warung Makan Barokah", type: "UMKM", category: "Restaurant", location: "Jakarta", rating: "4.8", desc: "Traditional Indonesian cuisine restaurant", skills: ["Cooking", "Service"] },

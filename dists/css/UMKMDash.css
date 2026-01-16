@@ -8,6 +8,41 @@
   --secondary-font: 'Inter', sans-serif;
 }
 
+/* LOADER */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--background-color); /* warna background loading */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* LOGO ANIMATION */
+.logo {
+  width: 500px;
+  animation: scaleFade 1.5s infinite ease-in-out;
+}
+
+@keyframes scaleFade {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .poppinsFont {
   font-family: poppins;
 }
