@@ -41,18 +41,24 @@
 
 <body>
 
+  <!-- LOADING SCREEN -->
+  <div id="loader">
+    <img src="../../assets/elements/UMatchLogoText.png" alt="Logo Website" class="logo">
+  </div>
+
+
   <!-- Navbar -->
   <nav class="navbar">
     <div class="container">
       <div class="nav-content">
-        <div class="logo">
+        <div class="logo1">
           <span class="logo-icon"></span>
-          <span class="logo-text"><img src="assets/elements/SmallerUMatchLogo.png" alt="" >Match</span>
+          <span class="logo-text"><img src="assets/elements/SmallerUMatchLogo.png" alt="">Match</span>
         </div>
         <div class="nav-menu" id="navMenu">
-          <a href="#" class="nav-link">Beranda</a>
-          <a href="#" class="nav-link">Tentang Kami</a>
-          <a href="#" class="nav-link">Kenapa UMatch</a>
+          <a href="#Beranda" class="nav-link">Beranda</a>
+          <a href="#TentangKami" class="nav-link">Tentang Kami</a>
+          <a href="#KenapaUMatch" class="nav-link">Kenapa UMatch</a>
           <a href="LogInPage.html" class="btn-secondary">Masuk</a>
           <a href="SignUpPage.html" class="btn-primary">Daftar</a>
         </div>
@@ -66,24 +72,27 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero" id="Beranda">
     <div class="container">
       <div class="hero-content">
-        <div class="hero-text">
-          <h1 class="hero-title">Tempat <span class="text-highlight">UMKM</span> Menemukan <span class="text-highlight">Talenta</span> Lokal Secara <span
-              class="text-highlight">Digital</span></h1>
+        <div class="hero-text trig-reveal-right enable-trig">
+          <h1 class="hero-title trig-target">Tempat <span class="text-highlight">UMKM</span> Menemukan <span
+              class="text-highlight">Talenta</span> Lokal Secara <span class="text-highlight">Digital</span></h1>
           <p class="hero-description">Profil digital UMKM dan rekrutmen tenaga kerja dalam satu platform.
           </p>
           <div class="cta-buttons">
             <div class="social-login">
-              <a href="#" class="btn-email">
-                <span class="google-icon"><i class="fa-solid fa-envelope" style="color: #F7FFF7;"></i></span> Daftar dengan Email
+              <a href="SignUpPage.html" class="btn-email">
+                <i class="fa-solid fa-envelope" style="color: #F7FFF7;"></i>Daftar
+                dengan Email
               </a>
-              <a href="#" class="btn-google">
-                <span class="google-icon"><i class="fa-brands fa-google" style="color: #2D3436;"></i></span> Daftar dengan Google
+              <a href="SignUpPage.html" class="btn-google">
+                <i class="fa-brands fa-google" style="color: #2D3436;"></i>Daftar
+                dengan Google
               </a>
-              <a href="#" class="btn-facebook">
-                <span class="facebook-icon"><i class="fa-brands fa-facebook"  style="color: #2D3436;"></i></span> Daftar dengan Facebook
+              <a href="SignUpPage.html" class="btn-facebook">
+                <i class="fa-brands fa-facebook" style="color: #2D3436;"></i>Daftar
+                dengan Facebook
               </a>
             </div>
           </div>
@@ -101,42 +110,112 @@
     <div class="container">
       <p class="partners-title">Beberapa yang Telah Berkolaborasi</p>
       <div class="swiper mySwiper1 ">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="assets/partnerLogo/LogoPartnerUmatch1.png" alt="" class="PartnerLogoSize">
-            </div>
-            <div class="swiper-slide">
-              <img src="assets/partnerLogo/LogoPartnerUmatch2.png" alt="" class="PartnerLogoSize">
-            </div>
-            <div class="swiper-slide">
-              <img src="assets/partnerLogo/LogoPartnerUmatch3.png" alt="" class="PartnerLogoSize">
-            </div>
-            <div class="swiper-slide">
-              <img src="assets/partnerLogo/LogoPartnerUmatch4.png" alt="" class="PartnerLogoSize">
-            </div>
-            <div class="swiper-slide">
-              <img src="assets/partnerLogo/LogoPartnerUmatch5.png" alt="" class="PartnerLogoSize">
-            </div>
-            <div class="swiper-slide">
-              <img src="assets/partnerLogo/LogoPartnerUmatch6.png" alt="" class="PartnerLogoSize">
-            </div>
-            <div class="swiper-slide">
-              <img src="assets/partnerLogo/LogoPartnerUmatch7.png" alt="" class="PartnerLogoSize">
-            </div>
-            <div class="swiper-slide">
-              <img src="assets/partnerLogo/LogoPartnerUmatch8.png" alt="" class="PartnerLogoSize">
-            </div>
-            <div class="swiper-slide">
-              <img src="assets/partnerLogo/LogoPartnerUmatch9.png" alt="" class="PartnerLogoSize">
-            </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="assets/partnerLogo/LogoPartnerUmatch1.png" alt="" class="PartnerLogoSize">
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/partnerLogo/LogoPartnerUmatch2.png" alt="" class="PartnerLogoSize">
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/partnerLogo/LogoPartnerUmatch3.png" alt="" class="PartnerLogoSize">
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/partnerLogo/LogoPartnerUmatch4.png" alt="" class="PartnerLogoSize">
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/partnerLogo/LogoPartnerUmatch5.png" alt="" class="PartnerLogoSize">
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/partnerLogo/LogoPartnerUmatch6.png" alt="" class="PartnerLogoSize">
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/partnerLogo/LogoPartnerUmatch7.png" alt="" class="PartnerLogoSize">
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/partnerLogo/LogoPartnerUmatch8.png" alt="" class="PartnerLogoSize">
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/partnerLogo/LogoPartnerUmatch9.png" alt="" class="PartnerLogoSize">
           </div>
         </div>
+      </div>
     </div>
   </section>
 
   <!-- Landasan Masalah Section -->
-  <section class="problem-section">
-    <div class="container">
+  <section class="problem-section ">
+    <section class="section  trig-reveal-right enable-trig">
+      <h2 class="trig-target Landasan">Landasan <span>Masalah</span></h2>
+      <p class="desc trig-target">
+        Banyak UMKM di Indonesia belum memanfaatkan teknologi digital secara optimal,
+        baik dalam pemasaran maupun perekrutan tenaga kerja. Keterbatasan literasi digital
+        dan akses ke talenta digital lokal menjadi hambatan utama.
+      </p>
+
+      <div class="content">
+
+        <!-- PIE -->
+        <div class="pie-wrapper">
+          <h4>Literasi Digital UMKM Indonesia 2025</h4>
+          <div class="pie"></div>
+
+          <div class="legend">
+            <div><span class="dot" style="background:#17b3a3"></span> Literasi Digital UMKM Memadai (35%)</div>
+            <div><span class="dot" style="background:#4fd1c5"></span> Belum Optimal Digital Marketing (35%)</div>
+            <div><span class="dot" style="background:#a7f3d0"></span> Tidak Paham Rekrut Digital (30%)</div>
+          </div>
+        </div>
+
+        <!-- BAR -->
+        <div>
+          <h4>Cara UMKM Merekrut Tenaga Digital 2025</h4>
+
+          <div class="bar-item">
+            <div class="bar-label"><span>Kenalan / Teman</span><span>60%</span></div>
+            <div class="bar">
+              <div class="bar-fill" style="width:60%"></div>
+            </div>
+          </div>
+
+          <div class="bar-item">
+            <div class="bar-label"><span>Facebook Group</span><span>25%</span></div>
+            <div class="bar">
+              <div class="bar-fill" style="width:25%"></div>
+            </div>
+          </div>
+
+          <div class="bar-item">
+            <div class="bar-label"><span>Platform Profesional</span><span>10%</span></div>
+            <div class="bar">
+              <div class="bar-fill" style="width:10%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- INFO -->
+        <div class="info">
+          <h4>Akses UMKM ke Talenta Digital Lokal</h4>
+
+          <div class="info-item">
+            <div class="icon">🏠</div>
+            <div>82% UMKM kesulitan akses talenta digital lokal</div>
+          </div>
+
+          <div class="info-item">
+            <div class="icon">📶</div>
+            <div>Tidak semua UMKM sudah terkoneksi digital</div>
+          </div>
+
+          <div class="info-item">
+            <div class="icon">📄</div>
+            <div>10jt anak muda butuh project UMKM sebagai portfolio</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- <div class="container">
       <h2 class="section-title1">Landasan <span class="text-orange">Masalah</span></h2>
       <p class="section-description1">Banyak UMKM di Indonesia yang kesulitan dalam mengakses tenaga kerja terampil,
         sementara banyak mahasiswa dan lulusan baru tidak menemukan pekerjaan yang sesuai dengan keahlian mereka. UMatch
@@ -145,26 +224,26 @@
 
       <div class="problem-content">
         <div class="problem-visual">
-          <img src="assets/images/PieChartData.png" alt="" width="95%">
+          <img src="assets/images/PieChartData.png" alt="">
         </div>
         <div class="problem-visual">
-          <img src="assets/images/TubeChartData.png" alt="" width="95%">
+          <img src="assets/images/TubeChartData.png" alt="">
         </div>
         <div class="problem-visual">
-          <img src="assets/images/FactChartData.png" alt="" width="95%">
+          <img src="assets/images/FactChartData.png" alt="">
         </div>
       </div>
-    </div>
+    </div> -->
   </section>
 
   <!-- Services Section -->
-  <section class="services-section">
+  <section class="services-section" id="TentangKami">
     <div class="container">
-      <div class="ApaItuUmatch-Header">
-        <h2 class="section-title">Apa itu <span class="text-orange">UMatch</span>?</h2>
-        <p class="section-description">UMatch adalah platform yang menghubungkan UMKM dengan talenta digital lokal dari
-        berbagai kampus. Kami menyediakan solusi untuk membantu UMKM menemukan kandidat yang tepat dan memberikan
-        kesempatan bagi mahasiswa atau lulusan untuk berkembang di dunia kerja.</p>
+      <div class="ApaItuUmatch-Header trig-reveal-right enable-trig">
+        <h2 class="section-title trig-target">Apa itu <span class="text-orange">UMatch</span>?</h2>
+        <p class="section-description trig-target">UMatch adalah platform yang menghubungkan UMKM dengan talenta digital lokal dari
+          berbagai kampus. Kami menyediakan solusi untuk membantu UMKM menemukan kandidat yang tepat dan memberikan
+          kesempatan bagi mahasiswa atau lulusan untuk berkembang di dunia kerja.</p>
       </div>
       <hr>
       <div class="services-grid">
@@ -211,27 +290,30 @@
   </section>
 
   <!-- Why UMatch Section -->
-  <section class="why-section">
-    <div class="container">
-      <h2 class="section-title1">Kenapa <span class="text-orange">UMatch?</span></h2>
+  <section class="why-section" id="KenapaUMatch">
+    <div class="container trig-reveal-right enable-trig">
+      <h2 class="section-title1 trig-target">Kenapa <span class="text-orange">UMatch?</span></h2>
 
       <div class="why-grid">
         <div class="why-card">
           <div class="why-icon"><i class="fa-solid fa-door-open" style="color: #2D3436;"></i></div>
           <h3 class="why-title">Akses Kerja UMKM Lebih Luas</h3>
-          <p class="why-description">Individu dapat menemukan peluang kerja di UMKM secara lebih mudah, transparan, dan terpusat tanpa harus bergantung pada cara konvensional.</p>
+          <p class="why-description">Individu dapat menemukan peluang kerja di UMKM secara lebih mudah, transparan, dan
+            terpusat tanpa harus bergantung pada cara konvensional.</p>
         </div>
 
         <div class="why-card">
           <div class="why-icon"><i class="fa-solid fa-chart-line" style="color: #2D3436;"></i></div>
           <h3 class="why-title">Pencarian Tenaga Kerja Lebih Tepat</h3>
-          <p class="why-description">Fitur matchmaking UMatch menghubungkan UMKM dengan tenaga kerja yang sesuai berdasarkan kebutuhan posisi, keahlian, dan jenis usaha.</p>
+          <p class="why-description">Fitur matchmaking UMatch menghubungkan UMKM dengan tenaga kerja yang sesuai
+            berdasarkan kebutuhan posisi, keahlian, dan jenis usaha.</p>
         </div>
 
         <div class="why-card">
           <div class="why-icon"><i class="fa-solid fa-lightbulb" style="color: #2D3436;"></i></div>
           <h3 class="why-title">Digitalisasi UMKM Lebih Praktis</h3>
-          <p class="why-description">UMatch membantu UMKM membangun profil usaha digital layaknya LinkedIn, sehingga lebih profesional, mudah ditemukan, dan siap bersaing di era digital!</p>
+          <p class="why-description">UMatch membantu UMKM membangun profil usaha digital layaknya LinkedIn, sehingga
+            lebih profesional, mudah ditemukan, dan siap bersaing di era digital!</p>
         </div>
       </div>
     </div>
@@ -242,7 +324,7 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-logo">
-          <div class="logo">
+          <div class="logo1">
             <span class="logo-icon"><img src="assets/elements/SmallerUMatchLogo.png" alt=""></span>
             <span class="logo-text" style="color: #2D3436; font-weight: bold;">Match</span>
           </div>
