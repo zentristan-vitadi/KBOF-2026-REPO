@@ -535,7 +535,7 @@ body {
   gap: 2rem;
   flex-wrap: wrap;
   margin-bottom: 1.5rem;
-  background-color: var(--tertiary-color);
+  background-color: rgba(69, 183, 209, 0.4);
   border-radius: 15px;
   padding: 1rem;
 }

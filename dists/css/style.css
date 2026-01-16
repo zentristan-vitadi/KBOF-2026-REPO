@@ -752,10 +752,6 @@ h6 {
     .hamburger {
         display: flex;
     }
-    .content{
-        display: flex;
-        flex-direction: row;
-    }
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -770,6 +766,11 @@ h6 {
         padding: 2rem 0;
         align-items: center;
         border-radius: 20px;
+    }
+    .content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 32px;
     }
     .nav-link {
         border: none;
