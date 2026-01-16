@@ -535,6 +535,9 @@ body {
   gap: 2rem;
   flex-wrap: wrap;
   margin-bottom: 1.5rem;
+  background-color: var(--tertiary-color);
+  border-radius: 15px;
+  padding: 1rem;
 }
 
 .stat-item {
@@ -545,10 +548,11 @@ body {
 .progress-container {
   background-color: var(--text-color);
   border-radius: 2rem;
-  padding: 0.2rem 0.3rem;
+  padding: 0.2rem 0.5rem;
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
+  width: fit-content;
 }
 
 .progress-bar {
@@ -881,7 +885,10 @@ body {
   .sidenav {
     transform: translateX(-100%);
   }
-
+  .profile-pic{
+    width: 4.5rem;
+    height: 3.5rem;
+  }
   .sidenav.active {
     transform: translateX(0);
   }
@@ -1120,7 +1127,11 @@ body {
   .mobile-menu-btn {
     display: block;
   }
-
+  .search-wrapper {
+  position: relative;
+  width: 80%;
+  margin-left: 20%;
+}
   .sidenav {
     transform: translateX(-100%);
   }
@@ -1214,7 +1225,7 @@ body {
 /* MESSAGE TESTING  */
 .chat-section {
   display: none;
-  height: calc(100vh - 4rem);
+  height: calc(80vh - 4rem);
   background-color: white;
   border-radius: 1rem;
   overflow: hidden;
