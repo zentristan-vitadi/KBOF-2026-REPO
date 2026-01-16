@@ -35,8 +35,7 @@ body {
 .left-section {
     flex: 1;
     /* background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), #a67c52; */
-    background-image: url(../../assets/images/SignUpPagesImages.png);
-    width: 10%;
+    background-image: url(../../assets/images/SignUpPagesImages.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
